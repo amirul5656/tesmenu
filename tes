@@ -1,1 +1,94 @@
+#!/bin/bash
+
+# Fungsi untuk menampilkan animasi loading bar
+fun_bar () {
+    command[0]="$1"
+    command[1]="$2"
+    (
+    [[ -e $HOME/fim ]] && rm $HOME/fim
+    ${command[0]} -y > /dev/null 2>&1
+    ${command[1]} -y > /dev/null 2>&1
+    touch $HOME/fim
+    ) > /dev/null 2>&1 &
+    tput civis
+    echo -ne "  \033[1;33mWAIT \033[1;37m- \033[1;33m["
+    while true; do
+        for((i=0; i<18; i++)); do
+            echo -ne "\033[1;31m#"
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[1;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "  \033[1;33mWAIT \033[1;37m- \033[1;33m["
+    done
+    echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+
+# Menu instalasi paket
+menu_install () {
+    clear
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;32mInstalasi Paket Dipilih\033[0m"
+    echo ""
+    # Tambahkan perintah instalasi paket yang diperlukan di sini
+    fun_bar 'apt-get update' 'apt-get upgrade'
+    echo ""
+    echo -e "\033[1;33mInstalasi selesai.\033[0m"
+    sleep 2
+}
+
+# Menu pengaturan basis data pengguna
+menu_userdb () {
+    clear
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;32mPengaturan Basis Data Pengguna Dipilih\033[0m"
+    echo ""
+    # Tambahkan perintah pengaturan basis data pengguna di sini
+    echo -e "\033[1;33mPengaturan selesai.\033[0m"
+    sleep 2
+}
+
+# Menu informasi lainnya
+menu_info () {
+    clear
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;32mInformasi Lainnya Dipilih\033[0m"
+    echo ""
+    # Tambahkan perintah untuk menampilkan informasi lainnya di sini
+    echo -e "\033[1;33mInformasi ditampilkan.\033[0m"
+    sleep 2
+}
+
+# Tampilan menu utama
+while true
+do
+    clear
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;37m1. Instalasi Paket\033[0m"
+    echo -e "\033[1;37m2. Pengaturan Basis Data Pengguna\033[0m"
+    echo -e "\033[1;37m3. Informasi Lainnya\033[0m"
+    echo -e "\033[1;37m0. Keluar\033[0m"
+    echo -e "\033[1;31m=============================================\033[0m"
+    read -p "Pilih menu [0-3]: " choice
+    case $choice in
+        1) menu_install ;;
+        2) menu_userdb ;;
+        3) menu_info ;;
+        0) echo -e "\033[1;32mTerima kasih!\033[0m"; exit 0 ;;
+        *) echo -e "\033[1;31mPilihan tidak valid. Masukkan lagi.\033[0m" ;;
+    esac
+    read -p "Tekan Enter untuk melanjutkan"
+done
 

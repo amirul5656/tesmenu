@@ -36,11 +36,20 @@ menu_install () {
     echo -e "\033[1;31m=================================================\033[0m"
     echo -e "\033[1;32mInstalasi Paket Dipilih\033[0m"
     echo ""
-    # Tambahkan perintah instalasi paket yang diperlukan di sini
-    fun_bar 'apt-get update' 'apt-get upgrade'
-    echo ""
-    echo -e "\033[1;33mInstalasi selesai.\033[0m"
-    sleep 2
+    echo -e "\033[1;37m1. \033[1;32m\033[1;4mInstalasi Paket\033[0m"
+    echo -e "\033[1;37m2. \033[1;32m\033[1;4mPengaturan Basis Data Pengguna\033[0m"
+    echo -e "\033[1;37m3. \033[1;32m\033[1;4mInformasi Lainnya\033[0m"
+    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
+    read -p "Pilih menu [0-3]: " choice
+    case $choice in
+        1) menu_install_func ;;
+        2) menu_userdb_func ;;
+        3) menu_info_func ;;
+        0) echo -e "\033[1;32mTerima kasih!\033[0m"; exit 0 ;;
+        *) echo -e "\033[1;31mPilihan tidak valid. Masukkan lagi.\033[0m" ;;
+    esac
+    read -p "Tekan Enter untuk melanjutkan"
 }
 
 # Menu pengaturan basis data pengguna
@@ -51,9 +60,20 @@ menu_userdb () {
     echo -e "\033[1;31m=================================================\033[0m"
     echo -e "\033[1;32mPengaturan Basis Data Pengguna Dipilih\033[0m"
     echo ""
-    # Tambahkan perintah pengaturan basis data pengguna di sini
-    echo -e "\033[1;33mPengaturan selesai.\033[0m"
-    sleep 2
+    echo -e "\033[1;37m1. Pengaturan Basis Data Pengguna"
+    echo -e "\033[1;37m2. \033[1;4m\033[1;32mInstalasi Paket\033[0m"
+    echo -e "\033[1;37m3. \033[1;4m\033[1;32mInformasi Lainnya\033[0m"
+    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
+    read -p "Pilih menu [0-3]: " choice
+    case $choice in
+        1) menu_userdb_func ;;
+        2) menu_install_func ;;
+        3) menu_info_func ;;
+        0) echo -e "\033[1;32mTerima kasih!\033[0m"; exit 0 ;;
+        *) echo -e "\033[1;31mPilihan tidak valid. Masukkan lagi.\033[0m" ;;
+    esac
+    read -p "Tekan Enter untuk melanjutkan"
 }
 
 # Menu informasi lainnya
@@ -64,7 +84,51 @@ menu_info () {
     echo -e "\033[1;31m=================================================\033[0m"
     echo -e "\033[1;32mInformasi Lainnya Dipilih\033[0m"
     echo ""
-    # Tambahkan perintah untuk menampilkan informasi lainnya di sini
+    echo -e "\033[1;37m1. Informasi Lainnya"
+    echo -e "\033[1;37m2. Pengaturan Basis Data Pengguna"
+    echo -e "\033[1;37m3. \033[1;4m\033[1;32mInstalasi Paket\033[0m"
+    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
+    read -p "Pilih menu [0-3]: " choice
+    case $choice in
+        1) menu_info_func ;;
+        2) menu_userdb_func ;;
+        3) menu_install_func ;;
+        0) echo -e "\033[1;32mTerima kasih!\033[0m"; exit 0 ;;
+        *) echo -e "\033[1;31mPilihan tidak valid. Masukkan lagi.\033[0m" ;;
+    esac
+    read -p "Tekan Enter untuk melanjutkan"
+}
+
+# Fungsi-fungsi untuk setiap menu
+menu_install_func () {
+    clear
+    echo -e "\033[1;31m===============================================\033[0m"
+    echo -e "           \033[1;33mInstalasi Paket Dipilih\033[0m"
+    echo -e "\033[1;31m===============================================\033[0m"
+    echo ""
+    fun_bar 'apt-get update' 'apt-get upgrade'
+    echo ""
+    echo -e "\033[1;33mInstalasi selesai.\033[0m"
+    sleep 2
+}
+
+menu_userdb_func () {
+    clear
+    echo -e "\033[1;31m===============================================\033[0m"
+    echo -e "           \033[1;33mPengaturan Basis Data Pengguna Dipilih\033[0m"
+    echo -e "\033[1;31m===============================================\033[0m"
+    echo ""
+    echo -e "\033[1;33mPengaturan selesai.\033[0m"
+    sleep 2
+}
+
+menu_info_func () {
+    clear
+    echo -e "\033[1;31m===============================================\033[0m"
+    echo -e "           \033[1;33mInformasi Lainnya Dipilih\033[0m"
+    echo -e "\033[1;31m===============================================\033[0m"
+    echo ""
     echo -e "\033[1;33mInformasi ditampilkan.\033[0m"
     sleep 2
 }

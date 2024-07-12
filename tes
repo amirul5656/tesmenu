@@ -76,10 +76,10 @@ do
     echo -e "\033[1;31m=============================================\033[0m"
     echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
     echo -e "\033[1;31m=============================================\033[0m"
-    echo -e "\033[1;37m1. Instalasi Paket\033[0m"
-    echo -e "\033[1;37m2. Pengaturan Basis Data Pengguna\033[0m"
-    echo -e "\033[1;37m3. Informasi Lainnya\033[0m"
-    echo -e "\033[1;37m0. Keluar\033[0m"
+    echo -e "\033[1;37m1. \033[1;32mInstalasi Paket\033[0m"
+    echo -e "\033[1;37m2. \033[1;32mPengaturan Basis Data Pengguna\033[0m"
+    echo -e "\033[1;37m3. \033[1;32mInformasi Lainnya\033[0m"
+    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
     echo -e "\033[1;31m=============================================\033[0m"
     read -p "Pilih menu [0-3]: " choice
     case $choice in
@@ -91,4 +91,3 @@ do
     esac
     read -p "Tekan Enter untuk melanjutkan"
 done
-

@@ -31,9 +31,9 @@ fun_bar () {
 # Menu instalasi paket
 menu_install () {
     clear
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "\033[1;32mInstalasi Paket Dipilih\033[0m"
     echo ""
     # Tambahkan perintah instalasi paket yang diperlukan di sini
@@ -46,9 +46,9 @@ menu_install () {
 # Menu pengaturan basis data pengguna
 menu_userdb () {
     clear
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "\033[1;32mPengaturan Basis Data Pengguna Dipilih\033[0m"
     echo ""
     # Tambahkan perintah pengaturan basis data pengguna di sini
@@ -59,9 +59,9 @@ menu_userdb () {
 # Menu informasi lainnya
 menu_info () {
     clear
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "\033[1;32mInformasi Lainnya Dipilih\033[0m"
     echo ""
     # Tambahkan perintah untuk menampilkan informasi lainnya di sini
@@ -73,14 +73,14 @@ menu_info () {
 while true
 do
     clear
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     echo -e "\033[1;37m1. \033[1;32mInstalasi Paket\033[0m"
     echo -e "\033[1;37m2. \033[1;32mPengaturan Basis Data Pengguna\033[0m"
     echo -e "\033[1;37m3. \033[1;32mInformasi Lainnya\033[0m"
     echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
-    echo -e "\033[1;31m=============================================\033[0m"
+    echo -e "\033[1;31m=================================================\033[0m"
     read -p "Pilih menu [0-3]: " choice
     case $choice in
         1) menu_install ;;

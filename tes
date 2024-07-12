@@ -32,14 +32,14 @@ fun_bar () {
 menu_install () {
     clear
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "           \033[1;37;41mSSHPLUS MANAGER MENU\033[0m"
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "\033[1;32mInstalasi Paket Dipilih\033[0m"
+    echo -e "\033[1;31mInstalasi Paket Dipilih\033[0m"
     echo ""
-    echo -e "\033[1;37m1. \033[1;32m\033[1;4mInstalasi Paket\033[0m"
-    echo -e "\033[1;37m2. \033[1;32m\033[1;4mPengaturan Basis Data Pengguna\033[0m"
-    echo -e "\033[1;37m3. \033[1;32m\033[1;4mInformasi Lainnya\033[0m"
-    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
+    echo -e "\033[1;37m1. \033[1;32mInstalasi Paket"
+    echo -e "\033[1;37m2. \033[1;32mPengaturan Basis Data Pengguna"
+    echo -e "\033[1;37m3. \033[1;32mInformasi Lainnya"
+    echo -e "\033[1;37m0. \033[1;32mKeluar"
     echo -e "\033[1;31m=================================================\033[0m"
     read -p "Pilih menu [0-3]: " choice
     case $choice in
@@ -56,14 +56,14 @@ menu_install () {
 menu_userdb () {
     clear
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "           \033[1;37;41mSSHPLUS MANAGER MENU\033[0m"
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "\033[1;32mPengaturan Basis Data Pengguna Dipilih\033[0m"
+    echo -e "\033[1;31mPengaturan Basis Data Pengguna Dipilih\033[0m"
     echo ""
     echo -e "\033[1;37m1. Pengaturan Basis Data Pengguna"
-    echo -e "\033[1;37m2. \033[1;4m\033[1;32mInstalasi Paket\033[0m"
-    echo -e "\033[1;37m3. \033[1;4m\033[1;32mInformasi Lainnya\033[0m"
-    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
+    echo -e "\033[1;37m2. \033[1;32mInstalasi Paket"
+    echo -e "\033[1;37m3. \033[1;32mInformasi Lainnya"
+    echo -e "\033[1;37m0. \033[1;32mKeluar"
     echo -e "\033[1;31m=================================================\033[0m"
     read -p "Pilih menu [0-3]: " choice
     case $choice in
@@ -80,14 +80,14 @@ menu_userdb () {
 menu_info () {
     clear
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "           \033[1;37;41mSSHPLUS MANAGER MENU\033[0m"
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "\033[1;32mInformasi Lainnya Dipilih\033[0m"
+    echo -e "\033[1;31mInformasi Lainnya Dipilih\033[0m"
     echo ""
     echo -e "\033[1;37m1. Informasi Lainnya"
     echo -e "\033[1;37m2. Pengaturan Basis Data Pengguna"
-    echo -e "\033[1;37m3. \033[1;4m\033[1;32mInstalasi Paket\033[0m"
-    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
+    echo -e "\033[1;37m3. \033[1;32mInstalasi Paket"
+    echo -e "\033[1;37m0. \033[1;32mKeluar"
     echo -e "\033[1;31m=================================================\033[0m"
     read -p "Pilih menu [0-3]: " choice
     case $choice in
@@ -138,12 +138,12 @@ while true
 do
     clear
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "           \033[1;33mSSHPLUS MANAGER MENU\033[0m"
+    echo -e "           \033[1;37;41mSSHPLUS MANAGER MENU\033[0m"
     echo -e "\033[1;31m=================================================\033[0m"
-    echo -e "\033[1;37m1. \033[1;32mInstalasi Paket\033[0m"
-    echo -e "\033[1;37m2. \033[1;32mPengaturan Basis Data Pengguna\033[0m"
-    echo -e "\033[1;37m3. \033[1;32mInformasi Lainnya\033[0m"
-    echo -e "\033[1;37m0. \033[1;32mKeluar\033[0m"
+    echo -e "\033[1;37m1. \033[1;32mInstalasi Paket"
+    echo -e "\033[1;37m2. \033[1;32mPengaturan Basis Data Pengguna"
+    echo -e "\033[1;37m3. \033[1;32mInformasi Lainnya"
+    echo -e "\033[1;37m0. \033[1;32mKeluar"
     echo -e "\033[1;31m=================================================\033[0m"
     read -p "Pilih menu [0-3]: " choice
     case $choice in
